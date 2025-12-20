@@ -1,0 +1,106 @@
+body {
+  margin: 0px;
+  /* default in all major browsers */
+}
+
+.red {
+  width: 97px;
+  height: 97px;
+  background: #FF0000;
+  opacity: 1;
+  top: 0px;
+  left: 0px;
+  position: relative;
+  z-index: 1;
+  margin: 0px;
+  padding: 0px;
+  /* border: 3px solid purple; */
+}
+
+.yellow {
+  width: 105px;
+  height: 97px;
+  background: #FFFF00;
+  opacity: 1;
+  top: 20px;
+  /*can try to change to 0 and see change*/
+  left: 0px;
+  position: absolute;
+  z-index: 15;
+  margin: 0px;
+  padding: 0px;
+  /* border: 3px solid purple; */
+}
+
+.green {
+  width: 105px;
+  height: 97px;
+  background: #00FF00;
+  opacity: 1;
+  top: 10px;
+  /*can try to change to 0 and see change*/
+  left: 0px;
+  position: absolute;
+  z-index: 14;
+  margin: 0px;
+  padding: 0px;
+  /* border: 3px solid purple; */
+}
+
+.blue {
+  width: 113px;
+  height: 97px;
+  background: #0000FF;
+  opacity: 1;
+  top: 20px;
+  /*can try to change to 0 and see change*/
+  left: 0px;
+  position: absolute;
+  z-index: 5;
+  margin: 0px;
+  padding: 0px;
+  /* border: 3px solid black; */
+}
+
+.purple {
+  width: 113px;
+  height: 97px;
+  background: #FF00FF;
+  opacity: 1;
+  top: 30px;
+  /*can try to change to 0 and see change*/
+  left: 0px;
+  position: absolute;
+  z-index: 60;
+  margin: 0px;
+  padding: 0px;
+  /* border: 3px solid black; */
+}
+
+.black {
+  width: 97px;
+  height: 97px;
+  background: #000000;
+  opacity: 1;
+  top: 0px;
+  /*can try to change to 0 and see change*/
+  left: 0px;
+  position: relative;
+  z-index: -60;
+  margin: 0px;
+  padding: 0px;
+  /* border: 3px solid black; */
+}
+
+/* .blue {
+  width: 97px;
+  height: 97px;
+  background: #0000FF;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 5;
+  margin: 0px;
+  padding: 0px;
+  border: 3px solid purple;
+} */
