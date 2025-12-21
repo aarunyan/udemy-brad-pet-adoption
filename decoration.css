@@ -5,6 +5,10 @@ html {
   background-color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .content-wrapper {
   background-color: #001D37;
   max-width: 1440px;
