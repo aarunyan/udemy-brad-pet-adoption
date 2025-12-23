@@ -182,6 +182,29 @@ html {
   font-weight: 300;
 }
 
+.filter-btn:hover {
+  color: #585757;
+}
+
+.active {
+  border: 3px solid transparent;
+  background-color: transparent;
+  font-size: 1.375rem;
+  font-family: "Source Sans 3", sans-serif;
+  padding: 0px;
+  margin: 0px 10px 0px 0px;
+  color: #5748f8;
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+.active:hover {
+  color: #5748f8;
+  text-decoration: underline;
+}
+
+
+
 .pet-card-list {
   /* border: 3px solid black; */
   display: grid;
