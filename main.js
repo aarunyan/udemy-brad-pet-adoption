@@ -60,6 +60,9 @@ async function fetch_pet_data() {
   console.log(pet_json)
   pet_json.forEach(el => {
     const pet_card_deep_clone = pet_card_template.content.cloneNode(true);
+    if (!el.photo) {
+      el.photo = './images/Fallback.jpg';
+    }
     pet_card_deep_clone.querySelector("#pet-img img").src = el.photo;
     pet_card_deep_clone.querySelector("#pet-name").textContent = el.name;
     pet_card_deep_clone.querySelector("#pet-detail").textContent = el.description;
