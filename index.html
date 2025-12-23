@@ -121,83 +121,24 @@
         <h3>Meet Our Friends</h3>
       </div>
       <div class="meet-our-friends-filter">
-        <p>Show me: <button class="filter-btn active">All Pets</button> <button class="filter-btn">Only Dogs</button>
-          <button class="filter-btn">Only Cats</button>
+        <p>Show me: <button class="filter-btn active" data-filter="all">All Pets</button> <button class="filter-btn"
+            data-filter="dog">Only Dogs</button>
+          <button class="filter-btn" data-filter="cat">Only Cats</button>
         </p>
       </div>
-
       <div class="pet-card-list" id="pet-card-list">
         <template id="pet-card-template">
 
-          <div class="pet-card">
+          <div class="pet-card" id="pet-card" data-filter="xxx">
             <div class="pet-img" id="pet-img">
-              <img src="./images/barksalot.jpg" alt="pet1">
+              <img src="#" alt="#">
             </div>
             <div class="pet-description" id="pet-description">
-              <h3 class="pet-description pet-name" id="pet-name">Barksalot</h3>
-              <p class="pet-description pet-detail" id="pet-detail">Barksalot is a sweet and lovable 3 year old ball of
-                fluff. He
-                loves
-                carrots, celery, and playing fetch.
-              </p>
-              <p class="pet-description pet-age" id="pet-age">2 years old</p>
+              <h3 class="pet-description pet-name" id="pet-name">xxx</h3>
+              <p class="pet-description pet-detail" id="pet-detail">xxx</p>
+              <p class="pet-description pet-age" id="pet-age">xxx</p>
             </div>
-
         </template>
-        <!-- <div class="pet-card">
-          <div class="pet-img">
-            <img src="./images/barksalot.jpg" alt="pet1">
-          </div>
-          <div class="pet-description">
-            <h3 class="pet-description pet-name">Barksalot</h3>
-            <p class="pet-description pet-detail">Barksalot is a sweet and lovable 3 year old ball of fluff. He loves
-              carrots, celery, and playing fetch.
-            </p>
-            <p class="pet-description pet-age">2 years old</p>
-          </div>
-        </div> -->
-
-        <!-- <div class="pet-card">
-          <div class="pet-img">
-            <img src="./images/meowsalot.jpg" alt="pet2">
-          </div>
-          <div class="pet-description">
-            <h3 class="pet-description pet-name">Meowsalot</h3>
-            <p class="pet-description pet-detail">Meowsalot is the most talkative cat we&apos;ve ever come across.
-              Constant meowing, chirping and purring!
-            </p>
-            <p class="pet-description pet-age">1 years old</p>
-          </div>
-        </div>
-
-        <div class="pet-card">
-          <div class="pet-img">
-            <img src="./images/woof.jpg" alt="pet3">
-          </div>
-          <div class="pet-description">
-            <h3 class="pet-description pet-name">Woof</h3>
-            <p class="pet-description pet-detail">Woof is a very talkative and sweet pup. She loves beets, plums,
-              cuddles and jumping over low fences.
-            </p>
-            <p class="pet-description pet-age">Less than a year old</p>
-          </div>
-        </div>
-
-        <div class="pet-card">
-          <div class="pet-img">
-            <img src="./images/purrsloud.jpg" alt="pet4">
-          </div>
-          <div class="pet-description">
-            <h3 class="pet-description pet-name">Purrsloud</h3>
-            <p class="pet-description pet-detail">Purrsloud has the loudest and most relaxing purr that&apos;s come
-              through our center. Come hear it
-              yourself.
-            </p>
-            <p class="pet-description pet-age">4 years old</p>
-          </div>
-        </div> -->
-        <!--end of a pet-->
-
       </div>
       <footer class="license">
         <p>© 2023 Fake Adoption Center. All rights reserved.</p>

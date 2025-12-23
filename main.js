@@ -38,6 +38,11 @@ function click_to_update_color(event) {
   list.forEach(li)
   //Update active (blue color font to the button we click)
   event.currentTarget.classList.add("active");
+
+  const filter_mode = event.currentTarget.dataset.filter;
+  // console.log(filter_mode);
+
+  fetch_pet_data(filter_mode); //Uncomment if I want to retrieve pet data
 }
 // --------------------------------------------------------------------------------
 
@@ -52,14 +57,25 @@ Retrieve pet database from promise to json
 
 
 
-async function fetch_pet_data() {
+async function fetch_pet_data(filter_mode) {
+
+
+
   const pet_promise = await fetch("https://learnwebcode.github.io/bootcamp-pet-data/pets.json");
   const pet_json = await pet_promise.json();
-  // console.log(pet_json);
   const pet_card_template = document.querySelector("#pet-card-template");
-  console.log(pet_json)
+  // console.log(pet_json)
+
+  const parent = document.querySelector("#pet-card-list");
+  parent.innerHTML = "";
+  parent.appendChild(pet_card_template);
+
+
   pet_json.forEach(el => {
     const pet_card_deep_clone = pet_card_template.content.cloneNode(true);
+    if (el.species != filter_mode) {
+      pet_card_deep_clone.querySelector("#pet-card").style.display = "none";
+    }
     if (!el.photo) {
       el.photo = './images/Fallback.jpg';
     }
@@ -68,12 +84,14 @@ async function fetch_pet_data() {
     pet_card_deep_clone.querySelector("#pet-detail").textContent = el.description;
     pet_card_deep_clone.querySelector("#pet-age").textContent = get_age_year(el.birthYear);
     document.querySelector("#pet-card-list").appendChild(pet_card_deep_clone);
-    console.log(el.name)
+    // console.log(el.name)
+
   })
+  console.log(parent);
 
 }
 
-fetch_pet_data(); //Uncomment if I want to retrieve pet data
+
 
 
 function get_age_year(birthYear) {
