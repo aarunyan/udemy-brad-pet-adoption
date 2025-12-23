@@ -21,7 +21,7 @@ Update style of buttons based on current click
 - event = manually selected object used with currentTarget attribute
 - By the way, both are objects with classList property
 */
-
+fetch_pet_data("all");
 const list = document.querySelectorAll(".meet-our-friends-filter .filter-btn");
 //path of object selection at .filter-btn from .meet-our-friends-filter
 list.forEach(el => {
@@ -58,9 +58,6 @@ Retrieve pet database from promise to json
 
 
 async function fetch_pet_data(filter_mode) {
-
-
-
   const pet_promise = await fetch("https://learnwebcode.github.io/bootcamp-pet-data/pets.json");
   const pet_json = await pet_promise.json();
   const pet_card_template = document.querySelector("#pet-card-template");
@@ -70,10 +67,9 @@ async function fetch_pet_data(filter_mode) {
   parent.innerHTML = "";
   parent.appendChild(pet_card_template);
 
-
   pet_json.forEach(el => {
     const pet_card_deep_clone = pet_card_template.content.cloneNode(true);
-    if (el.species != filter_mode) {
+    if ((el.species != filter_mode) && (filter_mode != "all")) {
       pet_card_deep_clone.querySelector("#pet-card").style.display = "none";
     }
     if (!el.photo) {
