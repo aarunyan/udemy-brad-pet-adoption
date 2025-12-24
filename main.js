@@ -12,7 +12,7 @@ async function start() {
   // console.log(miami_weather_forecast);
   document.querySelector("#dynamic-weather").textContent = miami_weather_forecast;
 }
-// start(); //Uncomment if I want to retrieve Miami weather data
+start(); //Uncomment if I want to retrieve Miami weather data
 // --------------------------------------------------------------------------------
 
 /*
