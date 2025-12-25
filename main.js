@@ -67,7 +67,7 @@ Retrieve pet database from promise to json
 
 async function fetch_pet_data(filter_mode) {
   //fetch pet data from website and parse to json format for data retrieval
-  const pet_promise = await fetch("https://learnwebcode.github.io/bootcamp-pet-data/pets.json");
+  const pet_promise = await fetch("https://pets-adoption-server.netlify.app/.netlify/functions/pets");
   const pet_json = await pet_promise.json();
 
   //Select and assign template into variable as a copy used for later
